@@ -6,7 +6,16 @@ class Category extends Model {}
 
 Category.init(
   {
-    // define columns
+    id: {
+      type:DataTypes.INTEGER,
+      notNull: true,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    catergory_name: {
+      type: DataTypes.STRING,
+      notNull: true,
+    },
   },
   {
     sequelize,
@@ -18,3 +27,6 @@ Category.init(
 );
 
 module.exports = Category;
+
+
+
